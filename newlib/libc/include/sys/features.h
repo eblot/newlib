@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.2 2001/01/12 02:41:33 dj Exp $
+ *  $Id: features.h,v 1.3 2001/04/12 00:05:57 cgf Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -86,6 +86,7 @@ extern "C" {
 # define _POSIX_THREAD_SAFE_FUNCTIONS            1
 # define _POSIX_THREAD_PRIORITY_SCHEDULING       1
 # define _POSIX_THREAD_ATTR_STACKSIZE            1
+# define _POSIX_SEMAPHORES                       1
 #endif
 
 #ifdef __cplusplus
