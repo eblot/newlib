@@ -150,7 +150,9 @@ static char *rcsid = "$Id: vfprintf.c,v 1.34 2000/12/08 00:28:25 jjohnstn Exp $"
 #else
 #define VFPRINTF vfprintf
 #define _VFPRINTF_R _vfprintf_r
+#ifndef NO_FLOATING_POINT
 #define FLOATING_POINT
+#endif
 #endif
 
 #define _NO_LONGLONG
