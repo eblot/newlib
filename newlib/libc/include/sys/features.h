@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.4 2002/04/30 18:17:40 fitzsim Exp $
+ *  $Id: features.h,v 1.5 2002/06/20 19:51:24 fitzsim Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -78,15 +78,16 @@ extern "C" {
 #endif
 
 #ifdef __CYGWIN__
-# define _POSIX_JOB_CONTROL	1
-# define _POSIX_SAVED_IDS	0
-# define _POSIX_VERSION		199009L
-# define _POSIX_THREADS                          1
-# define _POSIX_THREAD_PROCESS_SHARED            1
-# define _POSIX_THREAD_SAFE_FUNCTIONS            1
-# define _POSIX_THREAD_PRIORITY_SCHEDULING       1
-# define _POSIX_THREAD_ATTR_STACKSIZE            1
-# define _POSIX_SEMAPHORES                       1
+# define _POSIX_JOB_CONTROL			1
+# define _POSIX_SAVED_IDS			0
+# define _POSIX_VERSION				199009L
+# define _POSIX_THREADS                         1
+# define _POSIX_THREAD_PROCESS_SHARED           1
+# define _POSIX_THREAD_SAFE_FUNCTIONS           1
+# define _POSIX_THREAD_PRIORITY_SCHEDULING      1
+# define _POSIX_THREAD_ATTR_STACKSIZE           1
+# define _POSIX_SEMAPHORES                      1
+# define _POSIX_TIMERS				1
 #endif
 
 #ifdef __cplusplus
