@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: pthread.h,v 1.7 1999/04/26 18:22:08 joel Exp $
+ *  $Id: pthread.h,v 1.1 2000/12/12 01:34:17 jjohnstn Exp $
  */
 
 #ifndef __PTHREAD_h

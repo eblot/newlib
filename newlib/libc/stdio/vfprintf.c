@@ -135,7 +135,7 @@ Supporting OS subroutines required: <<close>>, <<fstat>>, <<isatty>>,
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)vfprintf.c	5.50 (Berkeley) 12/16/92";*/
-static char *rcsid = "$Id: vfprintf.c,v 1.34 2000/12/08 00:28:25 jjohnstn Exp $";
+static char *rcsid = "$Id: vfprintf.c,v 1.40 2002/05/08 01:25:55 fitzsim Exp $";
 #endif /* LIBC_SCCS and not lint */
 
 /*
