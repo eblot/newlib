@@ -7,7 +7,7 @@
  *       to our implementation.  We also need to set the Run-Time Invariant
  *       and other related values.
  *
- *  $Id: limits.h,v 1.1 2000/02/17 19:39:50 cgf Exp $
+ *  $Id: limits.h,v 1.1.1.1 2000/02/17 19:39:50 cgf Exp $
  */
 
 #ifndef _GCC_LIMITS_H_  /* if we have not seen gcc's limits.h yet */

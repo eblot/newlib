@@ -1,5 +1,5 @@
 /*
- *  $Id: signal.h,v 1.1 2000/02/17 19:39:50 cgf Exp $
+ *  $Id: signal.h,v 1.1.1.1 2000/02/17 19:39:50 cgf Exp $
  */
 
 #ifndef __POSIX_SIGNALS_h
