@@ -187,6 +187,7 @@ static char *rcsid = "$Id: vfprintf.c,v 1.43 2002/08/13 02:40:06 fitzsim Exp $";
 #include <reent.h>
 #include <wchar.h>
 #include <string.h>
+#include <sys/lock.h>
 
 #ifdef _HAVE_STDC
 #include <stdarg.h>
