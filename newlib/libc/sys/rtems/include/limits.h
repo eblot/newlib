@@ -7,12 +7,14 @@
  *       to our implementation.  We also need to set the Run-Time Invariant
  *       and other related values.
  *
- *  $Id: limits.h,v 1.1.1.1 2000/02/17 19:39:50 cgf Exp $
+ *  $Id: limits.h,v 1.2 2003/01/16 22:37:53 jjohnstn Exp $
  */
 
 #ifndef _GCC_LIMITS_H_  /* if we have not seen gcc's limits.h yet */
 #include_next <limits.h>
 #endif
+
+#include <sys/syslimits.h>
 
 #ifndef __POSIX_LIMITS_h
 #define __POSIX_LIMITS_h
@@ -57,12 +59,9 @@
 #define AIO_LISTIO_MAX          2
 #define AIO_MAX                 1
 #define AIO_PRIO_DELTA_MAX      0
-#define ARG_MAX                 4096
-#define CHILD_MAX               6
 #define DELAYTIMER_MAX          32
 #define MQ_OPEN_MAX             8
 #define MQ_PRIO_MAX             32
-#define OPEN_MAX                16
 #define PAGESIZE                1
 #define RTSIG_MAX               8
 #define SEM_NSEMS_MAX           256
@@ -71,17 +70,6 @@
 #define STREAM_MAX              8
 #define TIMER_MAX               32
 #define TZNAME_MAX              3
-
-/*
- *  Pathname Variables
- */
-
-#define LINK_MAX                8
-#define MAX_CANON               255
-#define MAX_INPUT               255
-#define NAME_MAX                255
-#define PATH_MAX                255
-#define PIPE_BUF                512
 
 /*
  *  Invariant values
