@@ -157,6 +157,7 @@ static char *rcsid = "$Id: vfprintf.c,v 1.43 2002/08/13 02:40:06 fitzsim Exp $";
  *
  * This code is large and complicated...
  */
+#include <newlib.h>
 
 #ifdef INTEGER_ONLY
 #define VFPRINTF vfiprintf
@@ -175,8 +176,6 @@ static char *rcsid = "$Id: vfprintf.c,v 1.43 2002/08/13 02:40:06 fitzsim Exp $";
 #endif
 
 #include <_ansi.h>
-#include <reent.h>
-#include <newlib.h>
 #include <reent.h>
 #include <stdio.h>
 #include <stdlib.h>
