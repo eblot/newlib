@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.5 2002/06/20 19:51:24 fitzsim Exp $
+ *  $Id: features.h,v 1.6 2004/02/09 02:22:01 cgf Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -88,6 +88,7 @@ extern "C" {
 # define _POSIX_THREAD_ATTR_STACKSIZE           1
 # define _POSIX_SEMAPHORES                      1
 # define _POSIX_TIMERS				1
+# define _POSIX_MEMLOCK_RANGE			1
 #endif
 
 #ifdef __cplusplus
