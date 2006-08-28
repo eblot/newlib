@@ -1,5 +1,5 @@
 /*
- *  $Id: param.h,v 1.2 1998/08/20 21:56:24 joel Exp $
+ *  $Id: param.h,v 1.1 2002/11/07 19:27:36 jjohnstn Exp $
  */
 
 #ifndef _MACHINE_PARAM_H_
@@ -34,8 +34,13 @@
 #define DEV_BSHIFT	9		/* log2(DEV_BSIZE) */
 #define DEV_BSIZE	(1<<DEV_BSHIFT)
 
+#if defined(__AVR__) || defined(__h8300__)
+#define BLKDEV_IOSIZE	1024
+#define MAXPHYS		(1 * 1024)	/* max raw I/O transfer size */
+#else
 #define BLKDEV_IOSIZE	2048
 #define MAXPHYS		(64 * 1024)	/* max raw I/O transfer size */
+#endif
 
 #define UPAGES	2		/* pages of u-area */
 
