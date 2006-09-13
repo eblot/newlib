@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.6 2004/02/09 02:22:01 cgf Exp $
+ *  $Id: features.h,v 1.7 2005/10/18 18:39:46 corinna Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -45,6 +45,9 @@ extern "C" {
 #define _POSIX_SHARED_MEMORY_OBJECTS	1
 #define _POSIX_SYNCHRONIZED_IO		1
 #define _POSIX_TIMERS			1
+#define _POSIX_BARRIERS                 200112L
+#define _POSIX_READER_WRITER_LOCKS      200112L
+#define _POSIX_SPIN_LOCKS               200112L
 
 
 /* In P1003.1b but defined by drafts at least as early as P1003.1c/D10  */
