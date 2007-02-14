@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.9 2007/02/07 17:19:35 corinna Exp $
+ *  $Id: features.h,v 1.10 2007/02/08 13:34:20 corinna Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -98,7 +98,7 @@ extern "C" {
 /* #define _POSIX_MEMLOCK			    -1 */
 #define _POSIX_MEMLOCK_RANGE			200112L
 #define _POSIX_MEMORY_PROTECTION		200112L
-/* #define _POSIX_MESSAGE_PASSING		    -1 */
+#define _POSIX_MESSAGE_PASSING			200112L
 /* #define _POSIX_MONOTONIC_CLOCK		    -1 */
 #define _POSIX_NO_TRUNC				     1
 /* #define _POSIX_PRIORITIZED_IO		    -1 */
