@@ -153,7 +153,8 @@ static char *rcsid = "$Id: vfprintf.c,v 1.43 2002/08/13 02:40:06 fitzsim Exp $";
 #endif
 
 #define _NO_LONGLONG
-#if defined _WANT_IO_LONG_LONG && defined __GNUC__
+#if defined _WANT_IO_LONG_LONG \
+	&& (defined __GNUC__ || __STDC_VERSION__ >= 199901L)
 # undef _NO_LONGLONG
 #endif
 
