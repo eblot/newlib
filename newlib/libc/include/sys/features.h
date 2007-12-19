@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.11 2007/02/14 10:07:02 corinna Exp $
+ *  $Id: features.h,v 1.12 2007/06/13 17:44:24 jjohnstn Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -81,6 +81,8 @@ extern "C" {
 #endif
 
 #ifdef __CYGWIN__
+
+#if !defined(__STRICT_ANSI__) || defined(__cplusplus) || __STDC_VERSION__ >= 199901L
 #define _POSIX_VERSION				200112L
 #define _POSIX2_VERSION				200112L
 #define _XOPEN_VERSION				   600
@@ -164,7 +166,8 @@ extern "C" {
 /* #define _XOPEN_STREAMS			    -1 */
 /* #define _XOPEN_UNIX				    -1 */
 
-#endif
+#endif /* !__STRICT_ANSI__ || __cplusplus || __STDC_VERSION__ >= 199901L */
+#endif /* __CYGWIN__ */
 
 #ifdef __SPU__
 /* Not much for now! */
