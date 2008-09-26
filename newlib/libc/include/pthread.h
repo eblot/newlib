@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: pthread.h,v 1.3 2002/10/08 13:03:07 joel Exp $
+ *  $Id: pthread.h,v 1.4 2006/09/13 22:09:27 jjohnstn Exp $
  */
 
 #ifndef __PTHREAD_h
@@ -56,6 +56,17 @@ int	_EXFUN(pthread_mutexattr_getpshared,
 		(_CONST pthread_mutexattr_t *__attr, int  *__pshared));
 int	_EXFUN(pthread_mutexattr_setpshared,
 		(pthread_mutexattr_t *__attr, int __pshared));
+
+#if defined(_UNIX98_THREAD_MUTEX_ATTRIBUTES)
+
+/* Single UNIX Specification 2 Mutex Attributes types */
+
+int _EXFUN(pthread_mutexattr_gettype,
+		(_CONST pthread_mutexattr_t *__attr, int *__kind));
+int _EXFUN(pthread_mutexattr_settype,
+		(pthread_mutexattr_t *__attr, int __kind));
+
+#endif
 
 /* Initializing and Destroying a Mutex, P1003.1c/Draft 10, p. 87 */
 
