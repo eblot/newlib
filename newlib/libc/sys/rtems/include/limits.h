@@ -7,7 +7,7 @@
  *       to our implementation.  We also need to set the Run-Time Invariant
  *       and other related values.
  *
- *  $Id: limits.h,v 1.2 2003/01/16 22:37:53 jjohnstn Exp $
+ *  $Id: limits.h,v 1.3 2008/11/17 22:05:12 jjohnstn Exp $
  */
 
 #ifndef _GCC_LIMITS_H_  /* if we have not seen gcc's limits.h yet */
@@ -42,6 +42,9 @@
 #define _POSIX_OPEN_MAX         16
 #define _POSIX_PATH_MAX         255
 #define _POSIX_PIPE_BUF         512
+/* The maximum number of repeated occurrences of a regular expression
+ *  *    permitted when using the interval notation `\{M,N\}'.  */
+#define _POSIX2_RE_DUP_MAX              255
 #define _POSIX_RTSIG_MAX        8
 #define _POSIX_SEM_NSEMS_MAX    256
 #define _POSIX_SEM_VALUE_MAX    32767
