@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.13 2007/12/19 18:51:19 jjohnstn Exp $
+ *  $Id: features.h,v 1.14 2008/10/16 21:53:58 jjohnstn Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -150,13 +150,13 @@ extern "C" {
 /* #define _POSIX2_PBS_TRACK			    -1 */
 #define _POSIX2_SW_DEV				200112L
 #define _POSIX2_UPE				200112L
-/* #define _POSIX_V6_ILP32_OFF32		    -1 */
+#define _POSIX_V6_ILP32_OFF32			    -1
 #define _XBS5_ILP32_OFF32			_POSIX_V6_ILP32_OFF32
 #define _POSIX_V6_ILP32_OFFBIG			     1
 #define _XBS5_ILP32_OFFBIG			_POSIX_V6_ILP32_OFFBIG
-/* #define _POSIX_V6_LP64_OFF64			    -1 */
+#define _POSIX_V6_LP64_OFF64			    -1
 #define _XBS5_LP64_OFF64			_POSIX_V6_LP64_OFF64
-/* #define _POSIX_V6_LPBIG_OFFBIG		    -1 */
+#define _POSIX_V6_LPBIG_OFFBIG			    -1
 #define _XBS5_LPBIG_OFFBIG			_POSIX_V6_LPBIG_OFFBIG
 #define _XOPEN_CRYPT				     1
 #define _XOPEN_ENH_I18N				     1
