@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.15 2008/12/04 13:58:11 corinna Exp $
+ *  $Id: features.h,v 1.16 2008/12/12 17:16:03 jjohnstn Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -169,11 +169,6 @@ extern "C" {
 
 #endif /* !__STRICT_ANSI__ || __cplusplus || __STDC_VERSION__ >= 199901L */
 #endif /* __CYGWIN__ */
-
-#ifdef __SPU__
-/* Not much for now! */
-#define _POSIX_TIMERS				     1
-#endif
 
 #ifdef __cplusplus
 }
