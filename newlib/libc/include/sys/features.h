@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.16 2008/12/12 17:16:03 jjohnstn Exp $
+ *  $Id: features.h,v 1.17 2009/04/06 22:04:33 jjohnstn Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -74,6 +74,13 @@ extern "C" {
 #define _POSIX_ADVISORY_INFO			1
 
 #endif
+
+/* XMK loosely adheres to POSIX -- 1003.1 */
+#ifdef __XMK__
+#define _POSIX_THREADS				1
+#define _POSIX_THREAD_PRIORITY_SCHEDULING	1
+#endif
+
 
 #ifdef __svr4__
 # define _POSIX_JOB_CONTROL     1

@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: pthread.h,v 1.5 2008/09/26 16:15:50 jjohnstn Exp $
+ *  $Id: pthread.h,v 1.6 2008/11/19 17:02:34 jjohnstn Exp $
  */
 
 #ifndef __PTHREAD_h
@@ -44,7 +44,7 @@ extern "C" {
   
     NOTE: RTEMS does not provide pthread_atfork().  */
 
-#if !defined(__rtems__)
+#if !defined(__rtems__) && !defined(__XMK__)
 #warning "Add pthread_atfork() prototype"
 #endif
 
