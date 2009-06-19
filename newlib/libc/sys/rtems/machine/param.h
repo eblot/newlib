@@ -1,5 +1,5 @@
 /*
- *  $Id: param.h,v 1.1 2002/11/07 19:27:36 jjohnstn Exp $
+ *  $Id: param.h,v 1.2 2006/08/28 17:17:24 jjohnstn Exp $
  */
 
 #ifndef _MACHINE_PARAM_H_
@@ -19,7 +19,7 @@
  * for all data types (int, long, ...).   The result is unsigned int
  * and must be cast to any desired pointer type.
  */
-#define ALIGNBYTES	(sizeof(int) - 1)
+#define ALIGNBYTES	(sizeof(double) - 1)
 #define ALIGN(p)	(((unsigned)(p) + ALIGNBYTES) & ~ALIGNBYTES)
 
 #define PAGE_SHIFT	12		/* LOG2(PAGE_SIZE) */
