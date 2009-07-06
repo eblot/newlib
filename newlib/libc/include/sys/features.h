@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.17 2009/04/06 22:04:33 jjohnstn Exp $
+ *  $Id: features.h,v 1.18 2009/06/17 16:47:02 jjohnstn Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -72,6 +72,9 @@ extern "C" {
 #define _POSIX_DEVCTL_DIRECTION			1
 #define _POSIX_INTERRUPT_CONTROL		1
 #define _POSIX_ADVISORY_INFO			1
+
+/* UNIX98 added some new pthread mutex attributes */
+#define _UNIX98_THREAD_MUTEX_ATTRIBUTES         1
 
 #endif
 
