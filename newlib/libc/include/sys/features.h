@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.18 2009/06/17 16:47:02 jjohnstn Exp $
+ *  $Id: features.h,v 1.19 2009/07/06 18:59:04 jjohnstn Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -179,6 +179,19 @@ extern "C" {
 
 #endif /* !__STRICT_ANSI__ || __cplusplus || __STDC_VERSION__ >= 199901L */
 #endif /* __CYGWIN__ */
+
+/* Per the permission given in POSIX.1-2008 section 2.2.1, define
+ * _POSIX_C_SOURCE if _XOPEN_SOURCE is defined and _POSIX_C_SOURCE is not.
+ * (_XOPEN_SOURCE indicates that XSI extensions are desired by an application.)
+ * This permission is first granted in 2008, but it is used for 2001, anyway.
+ */
+#if !defined(_POSIX_C_SOURCE)  &&  defined(_XOPEN_SOURCE) 
+  #if _XOPEN_SOURCE == 700	/* POSIX.1-2008 */
+    #define _POSIX_C_SOURCE       200809L
+   #elif _XOPEN_SOURCE == 600	/* POSIX.1-2001 */
+    #define _POSIX_C_SOURCE       200112L
+  #endif
+#endif
 
 #ifdef __cplusplus
 }
