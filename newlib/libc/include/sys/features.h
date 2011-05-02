@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.22 2010/08/09 08:29:22 corinna Exp $
+ *  $Id: features.h,v 1.23 2011/01/27 11:55:01 corinna Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -125,7 +125,7 @@ extern "C" {
 #define _POSIX_SHARED_MEMORY_OBJECTS		200112L 
 #define _POSIX_SHELL				     1
 /* #define _POSIX_SPAWN				    -1 */
-/* #define _POSIX_SPIN_LOCKS			    -1 */
+#define _POSIX_SPIN_LOCKS			    200112L
 /* #define _POSIX_SPORADIC_SERVER		    -1 */
 #define _POSIX_SYNCHRONIZED_IO			200112L
 /* #define _POSIX_THREAD_ATTR_STACKADDR		    -1 */
