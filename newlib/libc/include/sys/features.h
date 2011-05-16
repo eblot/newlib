@@ -15,7 +15,7 @@
  *  OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY OF THIS
  *  SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.
  *
- *  $Id: features.h,v 1.24 2011/05/02 16:05:06 yselkowitz Exp $
+ *  $Id: features.h,v 1.25 2011/05/15 18:50:52 corinna Exp $
  */
 
 #ifndef _SYS_FEATURES_H
@@ -103,7 +103,7 @@ extern "C" {
 /* #define _POSIX_BARRIERS			    -1 */
 #define _POSIX_CHOWN_RESTRICTED			     1
 /* #define _POSIX_CLOCK_SELECTION		    -1 */
-/* #define _POSIX_CPUTIME			    -1 */
+#define _POSIX_CPUTIME			    	200112L
 #define _POSIX_FSYNC				200112L
 #define _POSIX_IPV6				200112L
 #define _POSIX_JOB_CONTROL			     1
@@ -130,7 +130,7 @@ extern "C" {
 #define _POSIX_SYNCHRONIZED_IO			200112L
 #define _POSIX_THREAD_ATTR_STACKADDR		200112L
 #define _POSIX_THREAD_ATTR_STACKSIZE		200112L
-/* #define _POSIX_THREAD_CPUTIME		    -1 */
+#define _POSIX_THREAD_CPUTIME			200112L
 /* #define _POSIX_THREAD_PRIO_INHERIT		    -1 */
 /* #define _POSIX_THREAD_PRIO_PROTECT		    -1 */
 #define _POSIX_THREAD_PRIORITY_SCHEDULING	200112L
