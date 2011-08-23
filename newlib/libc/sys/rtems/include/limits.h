@@ -7,7 +7,7 @@
  *       to our implementation.  We also need to set the Run-Time Invariant
  *       and other related values.
  *
- *  $Id: limits.h,v 1.3 2008/11/17 22:05:12 jjohnstn Exp $
+ *  $Id: limits.h,v 1.4 2011/08/23 05:51:04 corsepiu Exp $
  */
 
 #ifndef _GCC_LIMITS_H_  /* if we have not seen gcc's limits.h yet */
@@ -78,7 +78,13 @@
  *  Invariant values
  */
 
+#ifdef __SIZE_MAX__
+#define SSIZE_MAX		(__SIZE_MAX__ >> 1)
+#elif defined(__SIZEOF_SIZE_T__) && defined(__CHAR_BIT__)
+#define SSIZE_MAX               ((1UL << (__SIZEOF_SIZE_T__ * __CHAR_BIT__ - 1)) - 1)
+#else /* historic fallback, wrong in most cases */
 #define SSIZE_MAX               32767
+#endif
 
 /*
  *  Maximum Values
