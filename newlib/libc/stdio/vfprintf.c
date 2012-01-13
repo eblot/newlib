@@ -114,7 +114,7 @@ Supporting OS subroutines required: <<close>>, <<fstat>>, <<isatty>>,
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)vfprintf.c	5.50 (Berkeley) 12/16/92";*/
-static char *rcsid = "$Id: vfprintf.c,v 1.43 2002/08/13 02:40:06 fitzsim Exp $";
+static char *rcsid = "$Id$";
 #endif /* LIBC_SCCS and not lint */
 
 /*
@@ -1225,6 +1225,15 @@ reswitch:	switch (ch) {
 				sign = '-';
 			break;
 #endif /* FLOATING_POINT */
+#ifdef _GLIBC_EXTENSION
+		case 'm':  /* extension */
+			{
+				int dummy;
+				cp = _strerror_r (data, data->_errno, 1, &dummy);
+			}
+			flags &= ~LONGINT;
+			goto string;
+#endif
 		case 'n':
 #ifndef _NO_LONGLONG
 			if (flags & QUADINT)
@@ -1272,8 +1281,11 @@ reswitch:	switch (ch) {
 #ifdef _WANT_IO_C99_FORMATS
 		case 'S':
 #endif
-			sign = '\0';
 			cp = GET_ARG (N, ap, char_ptr_t);
+#ifdef _GLIBC_EXTENSION
+string:
+#endif
+			sign = '\0';
 #ifndef __OPTIMIZE_SIZE__
 			/* Behavior is undefined if the user passed a
 			   NULL string when precision is not 0.
