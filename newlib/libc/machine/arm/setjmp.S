@@ -6,6 +6,11 @@
 #define CONCAT(a, b)  CONCAT2(a, b)
 #define CONCAT2(a, b) a##b
 
+#ifdef __clang__
+#undef __USER_LABEL_PREFIX__
+#define __USER_LABEL_PREFIX__
+#endif
+
 #ifndef __USER_LABEL_PREFIX__
 #error  __USER_LABEL_PREFIX__ not defined
 #endif
