@@ -78,8 +78,9 @@ static struct fdent* 	findslot	_PARAMS ((int));
 static int		newslot		_PARAMS ((void));
 
 /* Register name faking - works in collusion with the linker.  */
+#ifndef __clang__
 register char * stack_ptr asm ("sp");
-
+#endif
 
 /* following is copied from libc/stdio/local.h to check std streams */
 extern void   _EXFUN(__sinit,(struct _reent *));
@@ -599,6 +600,11 @@ _sbrk (int incr)
   
   prev_heap_end = heap_end;
   
+  /* Register name faking - works in collusion with the linker.  */
+  #ifdef __clang__
+  register char * stack_ptr asm ("sp");
+  #endif
+
   if (heap_end + incr > stack_ptr)
     {
       /* Some of the libstdc++-v3 tests rely upon detecting

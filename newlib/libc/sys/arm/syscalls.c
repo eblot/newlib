@@ -52,7 +52,9 @@ static int	do_AngelSWI	_PARAMS ((int, void *));
 static int 	findslot	_PARAMS ((int));
 
 /* Register name faking - works in collusion with the linker.  */
+#ifndef __clang__
 register char * stack_ptr asm ("sp");
+#endif // __clang__
 
 
 /* following is copied from libc/stdio/local.h to check std streams */
@@ -484,6 +486,11 @@ _sbrk (int incr)
   
   prev_heap_end = heap_end;
   
+  /* Register name faking - works in collusion with the linker.  */
+  #ifdef __clang__
+  register char * stack_ptr asm ("sp");
+  #endif // __clang__
+
   if (heap_end + incr > stack_ptr)
     {
       /* Some of the libstdc++-v3 tests rely upon detecting
