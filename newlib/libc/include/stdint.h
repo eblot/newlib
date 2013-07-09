@@ -15,6 +15,11 @@
 extern "C" {
 #endif
 
+#ifdef __clang__
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wundef"
+#endif
+
 #if __GNUC_PREREQ (3, 2)
 /* gcc > 3.2 implicitly defines the values we are interested */
 #define __STDINT_EXP(x) __##x##__
@@ -485,6 +490,9 @@ typedef unsigned long uintptr_t;
 #define UINTMAX_C(x)	x##ULL
 #endif
 
+#ifdef __clang__
+#pragma GCC diagnostic pop
+#endif
 
 #ifdef __cplusplus
 }
